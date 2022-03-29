@@ -1,0 +1,43 @@
+@use '../../../assets/Scss/variables';
+*{
+    box-sizing: border-box;
+    font-family: variables.$fuente;
+}
+@media screen and (max-width: 700px){
+    .buttonTitle{
+      position: relative;
+      right: 5.1%;
+    }
+    .titleApp { 
+        margin-bottom: 35%;
+      }
+  }
+  .titleApp{
+    margin-bottom: 24%;
+    color: variables.$fondoBlanco;
+    font-size: variables.$tamañoLetras1;
+    overflow-wrap:break-word;
+    &>div{
+      display: inline;
+      left: 43%;
+      position: relative;
+    }
+    &>h1{
+      display: inline;
+      &strong{
+        display: inherit;
+      }
+    }
+  }
+  button {
+    @include variables.buttons;
+    margin-top: 1%;
+    &:active{
+      color: variables.$fondoBlanco;
+      background-color: variables.$fondoBlanco5;
+      box-shadow: 0 0 0 .1rem variables.$fondoBlanco;
+    }
+    &:hover{
+    background-color: variables.$fondoBlanco1;
+    }
+  }

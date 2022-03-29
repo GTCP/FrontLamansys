@@ -1,0 +1,31 @@
+$fondoTransparente: transparent;
+$fondoBlanco5: rgba(255,255,255,0.5);
+$fondoBlanco2: rgba(255,255,255,0.2);
+$fondoBlanco1: rgba(255,255,255,0.1);
+$fondoBlanco:rgba(255,255,255,1);
+$fondoNegro5:rgba(34,34,34,0.5);
+$fondoNegro:rgba(34,34,34,1);
+$fondoNegro5:rgba(34,34,34,0.5);
+$fondoNegro2:rgba(34,34,34,0.2);
+$fondoNegro1:rgba(34,34,34,0.1);
+$fondoRojo: red;
+$radio: 4px;
+$paddingFijo: 8px;
+$marginFijo: 8px;
+$tamañoLetras1: 36px;
+$tamañoLetras2: 24px;
+$altura: 48px;
+$fuente: Roboto;
+$sizeInput: 16px;
+@mixin buttons{
+        display: inline;
+        color: $fondoBlanco5;
+        border: 2px solid $fondoBlanco5;
+        outline: none;
+        cursor: pointer;
+        background-color: $fondoTransparente;
+        padding: $paddingFijo;
+        border-radius: $radio;
+        height: $altura;
+        font-size: $tamañoLetras2; 
+}
