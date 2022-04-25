@@ -1,4 +1,9 @@
 export interface Task {
-    description : string,
-    completed: boolean
+    done: boolean,
+    id:  number,
+    name: string,
+    description: string,
+    story: any,
+    created: string,
+    due: string,
 }

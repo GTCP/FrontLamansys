@@ -1,0 +1,26 @@
+<section>
+    <article>
+        <div class="container">
+            <form  [formGroup]="myForm" (submit)="onSubmit()">
+                <mat-form-field>
+                    <label for="nombre"></label>
+                    <input matInput class="username" id="username" type="text" placeholder="Usuario" required formControlName="username">
+                </mat-form-field>
+                <div *ngIf="myForm.get('username').invalid && (myForm.get('username').dirty || myForm.get('username').touched)"
+                class="minText"><p>Minimo 4 caracteres</p>
+                </div>
+                <mat-form-field>
+                    <label for="description"></label>
+                    <input matInput class="password" id="password" type="password" placeholder="Contraseña" required formControlName="password">
+                </mat-form-field>
+                
+                <div *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)"
+                class="minText"><p>Minimo 4 caracteres</p>
+                </div>
+            </form>
+            <div>
+                <button  color="primary" mat-raised-button [disabled]="myForm.invalid" (click)="onSubmit()" type="submit">Logear</button>
+            </div>
+        </div>
+    </article>
+</section>

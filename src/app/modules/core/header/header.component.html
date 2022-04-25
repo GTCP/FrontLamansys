@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" >
+    <div *ngIf=" currentRoute !=='/login' ">
+        <div> 
+            <div *ngIf="((currentRoute=='/my-projects') || (currentRoute=='/home') 
+            || (currentRoute=='/my-allstories') || (currentRoute=='/user'));else other_content;">
+                <ng-content></ng-content>
+            </div>
+            <div >
+                <ng-template #other_content>
+                    <button class="menu-button"  mat-icon-button (click)="back()">
+                        <mat-icon>keyboard_backspace</mat-icon>
+                    </button>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="titleRoute" *ngIf=" currentRoute !=='/login' ">
+        <h1 class="titleRoute">{{currentRoute}}</h1>
+    </div>
+</mat-toolbar>

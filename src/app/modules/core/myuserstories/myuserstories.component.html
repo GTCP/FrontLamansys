@@ -1,0 +1,32 @@
+<section>
+    <div class="container" >
+        <article>
+            <div class="boxSpinner">
+                <mat-spinner  id="spinner"></mat-spinner>
+            </div>  
+        </article>
+        <div id="box" class="box" *ngFor="let e of epic">
+            <article>
+                <ul>        
+                    <li>
+                        <div>
+                            <p>{{e.description}}</p>    
+                        </div>
+                    </li>
+                </ul>
+                <ul *ngFor="let u of stories">
+                    <li >
+                        <div>
+                            <a routerLink="/my-projects/{{e.project}}/my-epics/{{idEpic}}/my-user-stories/{{u.id}}"><p class="text">{{u.name}}</p></a> 
+                        </div>
+                    </li>  
+                </ul>
+            </article>
+            <article>
+                <div  *ngIf=" lengthStories === 0">
+                    <p class="noItems">No hay User Stories</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

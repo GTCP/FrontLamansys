@@ -1,9 +1,0 @@
-<div class="container">
-        <form action="">
-                <input name="input" type="text" maxlength="80" #task 
-                (keyup.enter)="addTask(task.value)" placeholder="Escribe una tarea...">
-                <div>
-                        <button type="button" (click)="addTask(task.value)" ><ng-content></ng-content></button>  
-                </div>
-        </form>
-</div>

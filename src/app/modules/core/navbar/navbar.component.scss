@@ -1,0 +1,57 @@
+@import "/src/assets/styles/general.scss";
+mat-icon{
+    margin-left: 10%;
+    margin-right: 15%;
+}
+ul{
+    padding:0;
+}
+li{
+    margin-top:5%;
+    margin-bottom: 5%;
+    list-style-type: $none;
+    text-decoration: $none;    
+}
+ul>.div{
+    text-decoration: $none;    
+    &:hover{
+        background-color: aqua;
+    }
+    &:active{
+        background-color: aquamarine;
+    }
+    &:focus{
+        background-color: aqua;
+    }
+}
+.menu-button{
+    margin-right: 2%;
+    background-color: $backgroundTransparent;
+    border-color: $none;
+    outline: $none;
+    color: white;
+    border: $none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.image{
+    background-image: url("../../../../assets/images/logo2.png");
+    width: 50vh; 
+    height: 25vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+	display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.matVisibility{
+    visibility:hidden;
+}
+.matSpace{
+    margin-bottom: 10vh;
+}
+h1{
+    overflow: hidden;
+    white-space: nowrap;
+}

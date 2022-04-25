@@ -1,0 +1,17 @@
+<div class="container" >
+    <div class="boxSpinner">
+    <mat-spinner  id="spinner"></mat-spinner>
+    </div>
+    <div id="box" class="box">
+        <ul *ngFor="let p of Projects">
+            <li>
+                <div class="">
+                    <a routerLink="/my-projects/{{p.id}}"><p>{{p.name}}</p></a>      
+                </div>
+            </li>  
+        </ul>
+        <div *ngIf="lengthProjects === 0">
+            <p  class="noItems">No hay proyectos</p>
+        </div> 
+    </div>
+</div>

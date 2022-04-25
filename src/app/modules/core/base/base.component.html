@@ -1,0 +1,15 @@
+<header>
+    <app-header> <button class="menu-button"  mat-icon-button (click)="menuFunction(menu)">
+        <mat-icon>menu</mat-icon>
+    </button></app-header>
+</header>
+<mat-sidenav-container>
+    <mat-sidenav  (click)="menuFunction(menu)" #menu >
+        <app-navbar></app-navbar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

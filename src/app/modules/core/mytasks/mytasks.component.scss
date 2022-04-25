@@ -1,0 +1,30 @@
+@import "/src/assets/styles/general.scss";
+@include templateBox;
+@include spinner;
+@include card;
+@include NotifyNolength;
+button{
+    margin-left: 10%;
+}
+.container{
+    @include content;
+}
+p{
+    text-decoration: none;
+    color: white;
+    max-width: 40%;
+    overflow-wrap: ​break-word​;
+    text-overflow: ellipsis;
+    //overflow: hidden;
+    //white-space: nowrap;
+}
+li {
+    &>div{
+        margin-bottom: 2%;
+        padding: 0;
+    }   
+}
+.boxAddButton{
+    position:absolute;
+    right:18.1%;
+}
