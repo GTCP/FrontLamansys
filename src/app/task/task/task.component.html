@@ -1,0 +1,15 @@
+<li>
+    <div *ngIf="task.description !== null ">
+        <div class="check">
+            <label for="">
+                <input type="checkbox" (click)="completeTask(task)">
+            </label>
+            <p [ngClass]="task.completed ? 'line-through' : ''">{{task.description}}</p>
+        </div>
+        <div class="buttons "[ngStyle]="fTransparent">
+            <button><i (click)="copy(task.description)" class="mdi mdi-clipboard-list-outline"></i></button>
+            <button><i (click)="shareWA(task.description)" share class="mdi mdi-share share"></i></button>
+            <button><i (click)="deleteTask(task)" class="mdi mdi-delete"></i></button>
+        </div>
+    </div>
+</li>

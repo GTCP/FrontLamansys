@@ -1,0 +1,73 @@
+@use '../../../assets/Scss/variables';
+* {
+  box-sizing: border-box;
+  font-family: variables.$fuente;  
+}
+.line-through {
+    text-decoration: line-through;  
+}
+.buttons{
+    background-color: variables.$fondoTransparente;
+    border: none; 
+    outline: none;
+    padding: 0 6rem 0 1rem;
+    border-radius: variables.$radio;
+    display: flex;
+    position: absolute;
+    font-size: variables.$tamañoLetras2;
+    height: 4rem;
+    cursor: pointer;
+    height: variables.$altura;
+    right: -3rem;
+    &>button{ 
+        @include variables.buttons;
+        margin-right: variables.$marginFijo;
+        margin-top: 12%;
+        margin-right: 15%;
+        &:hover{
+            background-color: variables.$fondoBlanco2;
+        }
+        &:active{
+            background-color: variables.$fondoBlanco2;
+            border-color: variables.$fondoBlanco1;  
+        }
+    }
+} 
+li {
+    list-style: none;
+    &:hover{
+        background-color:  variables.$fondoBlanco1;
+    }
+    &>div{
+        list-style:none;
+        background-color:  variables.$fondoBlanco1;
+        margin-bottom: 2%;
+        border-radius: variables.$radio;
+        display: flex;
+        padding: 0;
+    }   
+}
+.check{ 
+    background-color: variables.$fondoTransparente;
+    border: none; 
+    outline: none;
+    padding: variables.$sizeInput;
+    font-size: variables.$tamañoLetras2;
+    height: 4rem;
+    border-radius: variables.$radio;
+    display: flex;
+    align-items: center;  
+    &>p{
+        color: variables.$fondoBlanco5;
+        font-size: variables.$tamañoLetras2;    
+    }
+    &>label>input {
+        cursor: pointer;
+        width: variables.$tamañoLetras2;
+        height: variables.$tamañoLetras2;
+        margin-right: variables.$tamañoLetras2;
+    }  
+}
+.prueba{
+    background-color: white;
+}

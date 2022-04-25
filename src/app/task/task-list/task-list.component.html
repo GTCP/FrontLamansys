@@ -1,0 +1,25 @@
+<div class="container">
+  <header>
+  <section>
+    <article>
+        <app-header><span class="iconify" data-icon="akar-icons:full-screen"></span>
+        </app-header>
+    </article>  
+  </section>
+  </header>
+  <main>
+    <section>
+      <article >
+        <app-add-task (newTask)="addTask($event)"><i class="mdi mdi-check-bold color"></i></app-add-task>
+      </article>
+    </section> 
+        <hr class="divisor">
+    <section>
+      <article>
+              <ul class="task">
+                <app-task *ngFor="let t of tasks" [task]="t" (updatedTask)="completeTask($event)" (deletedTask)="deleteTask($event)"></app-task>              
+              </ul>    
+      </article>
+    </section>
+  </main>
+</div>
